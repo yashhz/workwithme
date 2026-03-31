@@ -3,6 +3,63 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, ChevronDown, Check } from 'lucide-react';
 import { PROOF_OF_WORK } from '../data';
 
+const FUNDS = [
+    { name: 'Global Equity Fund', alloc: 34, holdings: 47, top: 'NVDA · MSFT · AAPL' },
+    { name: 'Tech Growth ETF',    alloc: 28, holdings: 31, top: 'NVDA · META · GOOGL' },
+    { name: 'EM Opportunities',   alloc: 22, holdings: 58, top: 'TSM · RELIANCE · BABA' },
+    { name: 'Dividend Core',      alloc: 16, holdings: 24, top: 'JNJ · KO · PG' },
+];
+
+const PortfolioMockup: React.FC = () => (
+    <div className="w-full aspect-video bg-[#0a0a0f] p-6 flex flex-col gap-4 select-none">
+        {/* Top bar */}
+        <div className="flex items-center justify-between mb-1">
+            <div>
+                <div className="text-[10px] text-white/30 uppercase tracking-widest mb-1">Portfolio Look-Through</div>
+                <div className="text-sm font-semibold text-white/80">4 funds · 160 underlying positions</div>
+            </div>
+            <div className="flex items-center gap-2">
+                <div className="px-2.5 py-1 rounded-full bg-violet-500/10 border border-violet-400/20 text-[10px] text-violet-300">Deduplicated</div>
+                <div className="px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[10px] text-white/30">Export CSV</div>
+            </div>
+        </div>
+
+        {/* Allocation bar */}
+        <div className="flex h-2 rounded-full overflow-hidden gap-px">
+            {FUNDS.map((f, i) => (
+                <div key={i} style={{ width: `${f.alloc}%` }}
+                    className={`h-full ${['bg-violet-500','bg-blue-500','bg-emerald-500','bg-amber-500'][i]} opacity-70`} />
+            ))}
+        </div>
+
+        {/* Fund rows */}
+        <div className="flex flex-col gap-2 flex-1">
+            {FUNDS.map((f, i) => (
+                <div key={i} className="flex items-center gap-4 px-3 py-2.5 rounded-lg bg-white/[0.03] border border-white/[0.05]">
+                    <div className={`w-2 h-2 rounded-full flex-shrink-0 ${['bg-violet-500','bg-blue-500','bg-emerald-500','bg-amber-500'][i]}`} />
+                    <div className="flex-1 min-w-0">
+                        <div className="text-xs text-white/70 font-medium truncate">{f.name}</div>
+                        <div className="text-[10px] text-white/25 mt-0.5">{f.top}</div>
+                    </div>
+                    <div className="text-right flex-shrink-0">
+                        <div className="text-xs text-white/60 font-semibold">{f.alloc}%</div>
+                        <div className="text-[10px] text-white/25">{f.holdings} holdings</div>
+                    </div>
+                    <div className="w-16 h-1.5 rounded-full bg-white/[0.06] overflow-hidden flex-shrink-0">
+                        <div style={{ width: `${f.alloc}%` }}
+                            className={`h-full rounded-full ${['bg-violet-500','bg-blue-500','bg-emerald-500','bg-amber-500'][i]} opacity-60`} />
+                    </div>
+                </div>
+            ))}
+        </div>
+
+        {/* Bottom note */}
+        <div className="text-[10px] text-white/20 text-center">
+            Confidential · Data blurred · Shown with client permission
+        </div>
+    </div>
+);
+
 const ProofOfWork: React.FC = () => {
     const [openId, setOpenId] = useState<string | null>(null);
 
@@ -67,6 +124,8 @@ const ProofOfWork: React.FC = () => {
                                                     item.mediaType === 'video'
                                                         ? <video src={item.mediaUrl} autoPlay muted loop playsInline className="w-full h-full object-cover" />
                                                         : <img src={item.mediaUrl} alt={item.title} className="w-full h-full object-cover" />
+                                                ) : item.id === 'portfolio-insight' ? (
+                                                    <PortfolioMockup />
                                                 ) : (
                                                     <div className="aspect-video w-full flex items-center justify-center bg-gradient-to-br from-white/[0.01] to-white/[0.05]">
                                                         <div className="flex flex-col items-center gap-3">

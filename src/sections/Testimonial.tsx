@@ -13,14 +13,14 @@ const REVIEWS = [
         quote: "Working with Yash was seamless from start to finish. He understood exactly what our brand needed — something that felt premium without being cold. The site loads fast, looks stunning, and our customers have noticed.",
         name: "auri star jewels",
         tag: "E-Commerce · Custom Build",
-        href: "https://auristarjewels.com",
+        href: "https://www.auristarjewels.com",
         initial: "A",
     },
     {
         quote: "Yash built our entire web presence and understood the financial advisory space immediately. No hand-holding needed — he got the brief, asked the right questions, and delivered something that actually converts. Clean, fast, and credible.",
         name: "bluechariot investments",
         tag: "Finance · Web",
-        href: "https://bluechariot.in",
+        href: "https://bluechariotinvestment.in",
         initial: "B",
     },
     {
@@ -89,3 +89,4 @@ const Testimonial = () => (
 );
 
 export default Testimonial;
+

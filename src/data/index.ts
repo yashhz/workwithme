@@ -7,7 +7,7 @@ export const PROOF_OF_WORK: ProofOfWorkItem[] = [
         title: 'Alaska Memorial',
         oneLiner: 'A Mario-style interactive vacation memorial for a family trip to Alaska.',
         tags: ['Creative', 'Game UI', 'Custom Build'],
-        description: 'A family wanted something more than a photo album. They wanted to relive it. So I built a fully interactive experience — Mario-style loading screen, character selection screen, then a hand-drawn explorable map of every real location they visited. Click a pin and a song from that day starts playing while photos and videos from that exact place come to life on screen. Zero templates. Zero off-the-shelf components. Every pixel was a decision.',
+        description: "A family wanted something more than a photo album — they wanted to actually relive it. So I built a fully custom interactive experience from scratch. Mario-style loading screen, character selection, then a hand-drawn explorable map of every real location they visited on the trip. Click a pin and a song from that day starts playing while photos and videos from that exact spot come to life. Zero templates, zero off-the-shelf components. Built and shipped in under a week.",
         what: [
             'Custom game-style loading + character select screen',
             'Interactive SVG map with clickable location pins',
@@ -15,11 +15,11 @@ export const PROOF_OF_WORK: ProofOfWorkItem[] = [
             'Mobile-responsive with touch gesture support',
         ],
         stack: ['React', 'Framer Motion', 'Custom SVG', 'Howler.js', 'Vercel'],
-        outcome: "Delivered in 10 days. Client called it the best gift they've ever received.",
+        outcome: "Delivered in under a week. Client called it the best gift their family has ever received.",
         buttonText: 'Private — Shown with Permission',
         buttonLink: '#',
         mediaType: 'video',
-        mediaUrl: '',
+        mediaUrl: '/alaska.mp4',
     },
     {
         id: 'portfolio-insight',
@@ -37,7 +37,6 @@ export const PROOF_OF_WORK: ProofOfWorkItem[] = [
         ],
         stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Recharts', 'Supabase'],
         outcome: 'Client now runs monthly portfolio reviews using this tool instead of manual Excel models.',
-        note: 'ⓘ Confidential — sensitive data blurred. Shown with client permission.',
         buttonText: 'Private — NDA',
         buttonLink: '#',
         mediaType: 'image',
@@ -60,7 +59,9 @@ export const PROOF_OF_WORK: ProofOfWorkItem[] = [
         stack: ['Next.js', 'Supabase', 'OpenAI API', 'Cloudflare R2', 'Vercel'],
         outcome: 'Platform handles 25,000+ active members with sub-second chapter load times.',
         buttonText: 'View Live Site ↗',
-        buttonLink: 'https://toonhwa.vercel.app',
+        buttonLink: 'https://toonhwa.org',
+        mediaType: 'image',
+        mediaUrl: '/toobwa.png',
     },
     {
         id: 'auri-star',
@@ -79,27 +80,30 @@ export const PROOF_OF_WORK: ProofOfWorkItem[] = [
         stack: ['Next.js', 'Razorpay', 'Sanity CMS', 'Cloudinary', 'Vercel'],
         outcome: 'Page load dropped from 4.2s to 0.8s. Bounce rate fell 34% in the first month.',
         buttonText: 'View Live Site ↗',
-        buttonLink: 'https://auristarjewels.com',
+        buttonLink: 'https://www.auristarjewels.com',
+        mediaType: 'image',
+        mediaUrl: '/auri.png',
     },
     {
         id: 'bluechariot',
         number: '05',
         title: 'Bluechariot Investments',
-        oneLiner: 'A clean, high-trust digital presence for a financial advisory firm.',
-        tags: ['Finance', 'Web', 'Consulting'],
-        description: "When you're a financial advisory firm helping founders raise from VCs and institutions, your website is your first pitch. It has to signal credibility before a single word is read. I built Bluechariot's digital presence from the ground up — structured to speak the language of institutional investors, designed to convert founder inquiries, and fast enough to not embarrass anyone in a board meeting.",
+        oneLiner: 'The digital home for a financial firm built for serious promoters and founders.',
+        tags: ['Finance', 'Web', 'Branding'],
+        description: "Bluechariot is a financial advisory firm founded by CAs and CFAs — they work with promoters and founders across investor relations, portfolio management, virtual CFO services, and fundraising. Their pitch is simple: personally involved, not managing from a distance. The site needed to reflect exactly that. No generic finance template, no stock photo of a handshake. I built their full digital presence from scratch — structured around their four service lines, written to speak directly to the promoter who is serious about building something real.",
         what: [
-            'Full brand identity and design system',
-            'Conversion-optimized landing pages for each service line',
-            'Founder intake form with CRM integration',
-            'SEO architecture targeting high-intent founder search terms',
-            'Analytics and conversion tracking setup',
+            'Full site design and build across 6 pages',
+            'Service-specific landing sections for IR, Portfolio, Virtual CFO, and Fundraising',
+            'Contact and inquiry flow with email routing',
+            'Mobile-first, fast, and credible on first load',
+            'Copy structured around their actual client profile',
         ],
-        stack: ['Next.js', 'Framer Motion', 'Airtable CRM', 'Vercel'],
-        outcome: 'Site ranks on page 1 for target keywords. Inbound inquiry volume up 3x post-launch.',
-        note: 'ⓘ Related Party Transaction: Promoter-owned entity. DYOR.',
+        stack: ['Next.js', 'Framer Motion', 'Vercel'],
+        outcome: 'Live and actively converting. Built by yashhz — credited in the footer.',
         buttonText: 'View Live Site ↗',
-        buttonLink: 'https://bluechariot.in',
+        buttonLink: 'https://bluechariotinvestment.in',
+        mediaType: 'image',
+        mediaUrl: '/bluechariot.png',
     },
 ];
 
@@ -202,6 +206,8 @@ export const ORDER_STEPS: OrderStep[] = [
         detail: '30-day support included',
     },
 ];
+
+
 
 
 
