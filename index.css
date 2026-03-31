@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-label: 'DM Mono', monospace;
+}
+
+@keyframes glow-orbit {
+  0%   { transform: translate(-10%, -10%) rotate(0deg)   translate(30px) rotate(0deg); }
+  100% { transform: translate(-10%, -10%) rotate(360deg) translate(30px) rotate(-360deg); }
+}
+
+@keyframes glow-orbit-fast {
+  0%   { transform: translate(-10%, -10%) rotate(0deg)   translate(50px) rotate(0deg); }
+  100% { transform: translate(-10%, -10%) rotate(360deg) translate(50px) rotate(-360deg); }
+}
+
+.glow-blob {
+  animation: glow-orbit 6s linear infinite;
+}
+
+.glow-card:hover .glow-blob {
+  animation: glow-orbit-fast 3s linear infinite;
+  opacity: 0.9 !important;
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.glow-card {
+  transition: border-color 0.3s ease;
+}

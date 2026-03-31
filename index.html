@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/hz logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="theme-color" content="#0D0D0D" />
+
+    <title>work with me / yash lahoti</title>
+    <meta name="description" content="Full-stack developer based in Surat. I build MVPs, websites and automations for founders and businesses. Fast, direct, no agency layers." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="work with me / yash lahoti" />
+    <meta property="og:description" content="Full-stack developer based in Surat. I build MVPs, websites and automations for founders and businesses. Fast, direct, no agency layers." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/hz logo.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="work with me / yash lahoti" />
+    <meta name="twitter:description" content="Full-stack developer based in Surat. I build MVPs, websites and automations for founders and businesses. Fast, direct, no agency layers." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts: Syne for art-house impact, Outfit for clean luxury readability -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-color: #030303;
+        --text-main: #f0f0f0;
+        --text-muted: #888888;
+      }
+      body {
+        background-color: #0D0D0D;
+        color: #F8F7FF;
+        font-family: 'DM Sans', sans-serif;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, h4, .font-heading {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .font-label {
+        font-family: 'DM Mono', monospace;
+      }
+      /* Performance optimizations */
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      img {
+        content-visibility: auto;
+      }
+      /* Touch optimizations */
+      button, a {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+        touch-action: manipulation;
+      }
+      /* Prevent text selection on mobile for better UX */
+      @media (max-width: 768px) {
+        .font-display {
+          -webkit-user-select: none;
+          user-select: none;
+        }
+      }
+      /* Hide scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+      .grain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+    </style>
+
+</head>
+  <body>
+    <div id="root"></div>
+    <div class="grain"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
