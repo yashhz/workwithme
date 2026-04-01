@@ -25,6 +25,7 @@ export interface ServicePackage {
     name: string;
     tagline: string;
     price: number;
+    priceMax?: number;
     timeline: string;
     includes: PackageInclude[];
 }

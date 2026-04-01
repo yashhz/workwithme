@@ -11,7 +11,7 @@ const FUNDS = [
 ];
 
 const PortfolioMockup: React.FC = () => (
-    <div className="w-full aspect-video bg-[#0a0a0f] p-6 flex flex-col gap-4 select-none">
+    <div className="w-full h-full bg-[#0a0a0f] p-6 flex flex-col gap-4 select-none">
         {/* Top bar */}
         <div className="flex items-center justify-between mb-1">
             <div>
@@ -119,7 +119,9 @@ const ProofOfWork: React.FC = () => {
                                         transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                                     >
                                         <div className="px-4 pb-12 pt-4">
-                                            <div className="mb-10 rounded-lg overflow-hidden bg-white/[0.03] border border-white/10 max-h-[400px] flex items-center justify-center">
+                                            <div className="mb-10 rounded-lg overflow-hidden bg-white/[0.03] border border-white/10">
+                                                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                                                    <div className="absolute inset-0">
                                                 {item.mediaUrl ? (
                                                     item.mediaType === 'video'
                                                         ? <video src={item.mediaUrl} autoPlay muted loop playsInline className="w-full h-full object-cover" />
@@ -127,7 +129,7 @@ const ProofOfWork: React.FC = () => {
                                                 ) : item.id === 'portfolio-insight' ? (
                                                     <PortfolioMockup />
                                                 ) : (
-                                                    <div className="aspect-video w-full flex items-center justify-center bg-gradient-to-br from-white/[0.01] to-white/[0.05]">
+                                                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-white/[0.01] to-white/[0.05]">
                                                         <div className="flex flex-col items-center gap-3">
                                                             <div className="w-12 h-[1px] bg-white/10" />
                                                             <span className="text-[10px] text-white/20 uppercase tracking-[0.2em]">Execution Preview</span>
@@ -135,6 +137,8 @@ const ProofOfWork: React.FC = () => {
                                                         </div>
                                                     </div>
                                                 )}
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <div className="grid grid-cols-1 md:grid-cols-[1fr_280px] gap-10">

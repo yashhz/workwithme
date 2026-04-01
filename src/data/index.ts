@@ -112,7 +112,8 @@ export const FOUNDER_PACKAGES: ServicePackage[] = [
         id: 'mvp',
         name: 'MVP Development',
         tagline: 'From idea to deployed product. Built to ship, not to demo.',
-        price: 120000,
+        price: 90000,
+        priceMax: 150000,
         timeline: '3-4 Weeks',
         includes: [
             { label: 'Core Architecture', detail: 'Next.js + Supabase/PostgreSQL' },
@@ -125,17 +126,18 @@ export const FOUNDER_PACKAGES: ServicePackage[] = [
     },
     {
         id: 'ai-agents',
-        name: 'AI Agentic Architecture',
-        tagline: 'Beyond the wrapper. Build autonomous systems that handle cognitive labor while you sleep.',
-        price: 180000,
+        name: 'AI Automations & Custom Systems',
+        tagline: 'Build practical automations and AI-powered workflows that reduce manual work and actually get used in your business.',
+        price: 30000,
+        priceMax: 90000,
         timeline: '4-5 Weeks',
         includes: [
-            { label: 'Agentic Logic', detail: 'Autonomous ReAct/CoT reasoning loops' },
-            { label: 'Cognitive Memory', detail: 'Vector DB + RAG Pipeline for context' },
-            { label: 'Tool Integration', detail: 'Agents that use APIs, Browse, and Email' },
-            { label: 'Automation Ops', detail: 'Multi-step workflows + Human-in-the-loop' },
-            { label: 'Observability', detail: 'LLM cost tracking + Performance dashboard' },
-            { label: 'Scalability', detail: 'Queue management for high volume' },
+            { label: 'Workflow Automation', detail: 'Multi-step processes to remove repetitive tasks' },
+            { label: 'AI Integrations', detail: 'Use AI for content, data handling, or simple decision flows' },
+            { label: 'Custom Tools', detail: 'Internal dashboards or admin panels based on your needs' },
+            { label: 'Tool Integrations', detail: 'Connect apps, APIs, forms, CRM, payments, etc.' },
+            { label: 'Process Simplification', detail: 'Clean up messy operations and make them efficient' },
+            { label: 'Handover', detail: 'Setup, testing, and walkthrough so you can use it properly' },
         ],
     },
 ];
@@ -145,7 +147,8 @@ export const BUSINESS_PACKAGES: ServicePackage[] = [
         id: 'webdev',
         name: 'Web Development',
         tagline: 'High-performance websites and web applications. Custom-built, not templated.',
-        price: 55000,
+        price: 40000,
+        priceMax: 80000,
         timeline: '3 Weeks',
         includes: [
             { label: 'Design', detail: 'Custom Design System + Mobile-First UI' },
@@ -160,7 +163,8 @@ export const BUSINESS_PACKAGES: ServicePackage[] = [
         id: 'automation-bi',
         name: 'Enterprise Automation & BI',
         tagline: 'Banker-grade reporting and legacy-killing automation. Turn raw data into Alpha.',
-        price: 110000,
+        price: 80000,
+        priceMax: 150000,
         timeline: '3-4 Weeks',
         includes: [
             { label: 'Single Source of Truth', detail: 'Unified Data Lake for all SaaS tools' },
@@ -206,6 +210,13 @@ export const ORDER_STEPS: OrderStep[] = [
         detail: '30-day support included',
     },
 ];
+
+
+
+
+
+
+
 
 
 

@@ -36,10 +36,9 @@ export const useRegion = (): Region => {
 export const formatRegionPrice = (baseINR: number, region: Region): string => {
     const cfg = REGION_CONFIG[region];
     const converted = baseINR * cfg.multiplier * cfg.rateFromINR;
-    const rounded = Math.ceil(converted / (region === 'IN' ? 1000 : 100)) * (region === 'IN' ? 1000 : 100);
     return new Intl.NumberFormat(cfg.locale, {
         style: 'currency',
         currency: cfg.currency,
         maximumFractionDigits: 0,
-    }).format(rounded);
+    }).format(converted);
 };

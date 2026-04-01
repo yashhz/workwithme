@@ -85,9 +85,7 @@ const AlaCarteSection: React.FC<Props> = ({ region }) => {
                                         </span>
                                     </div>
                                     <div className="flex flex-col items-end">
-                                        <span className="text-[10px] text-violet-400 uppercase tracking-widest mb-0.5">
-                                            {item.isStarting ? 'from' : 'typically'}
-                                        </span>
+                                        <span className="text-[10px] text-violet-400 uppercase tracking-widest mb-0.5">from</span>
                                         <span className="text-sm font-bold text-white">
                                             {formatRegionPrice(item.price, region)}
                                         </span>
